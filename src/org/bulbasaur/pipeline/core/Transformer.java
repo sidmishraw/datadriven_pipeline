@@ -14,7 +14,7 @@ package org.bulbasaur.pipeline.core;
  *         Qualified Name: org.bulbasaur.pipeline.core.Transformer
  *
  */
-public class Transformer<T> extends Filter<T> {
+public abstract class Transformer<T> extends Filter<T> {
 	
 	
 	/**
@@ -33,9 +33,11 @@ public class Transformer<T> extends Filter<T> {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Message<T> transform(Message<T> message) {
-		
-		
-		return null;
-	}
+	/**
+	 * 
+	 * @param message
+	 * @return transformed message {@link Message}<T>
+	 *         transformed message which is obtained from the incoming message
+	 */
+	public abstract Message<T> transform(Message<T> message);
 }

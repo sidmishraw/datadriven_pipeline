@@ -14,7 +14,7 @@ package org.bulbasaur.pipeline.core;
  *         Qualified Name: org.bulbasaur.pipeline.core.Consumer
  *
  */
-public class Consumer<T> extends Filter<T> {
+public abstract class Consumer<T> extends Filter<T> {
 	
 	
 	/**
@@ -34,9 +34,11 @@ public class Consumer<T> extends Filter<T> {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void consume(Message<T> message) {
-		
-		
-		return;
-	}
+	/**
+	 * 
+	 * @param message
+	 *            {@link Message}<T>
+	 *            the message to be consumed for performing some operation
+	 */
+	public abstract void consume(Message<T> message);
 }

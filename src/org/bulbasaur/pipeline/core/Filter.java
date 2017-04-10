@@ -14,7 +14,7 @@ package org.bulbasaur.pipeline.core;
  *         Qualified Name: org.bulbasaur.pipeline.core.Filter
  *
  */
-public class Filter<T> implements Subscriber {
+public abstract class Filter<T> implements Subscriber {
 	
 	
 	protected Pipe<T>	outPipe	= null;

@@ -14,7 +14,7 @@ package org.bulbasaur.pipeline.core;
  *         Qualified Name: org.bulbasaur.pipeline.core.Tester
  *
  */
-public class Tester<T> extends Filter<T> {
+public abstract class Tester<T> extends Filter<T> {
 	
 	
 	/**
@@ -33,9 +33,12 @@ public class Tester<T> extends Filter<T> {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public boolean test(Message<T> message) {
-		
-		
-		return false;
-	}
+	/**
+	 * 
+	 * @param message
+	 * @return status {@link boolean}
+	 *         Provides the status of a message after testing it which is `true`
+	 *         for success and `false` for fail
+	 */
+	public abstract boolean test(Message<T> message);
 }

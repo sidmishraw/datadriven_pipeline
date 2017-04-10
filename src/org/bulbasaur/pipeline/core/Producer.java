@@ -14,7 +14,7 @@ package org.bulbasaur.pipeline.core;
  *         Qualified Name: org.bulbasaur.pipeline.core.Producer
  *
  */
-public class Producer<T> extends Filter<T> {
+public abstract class Producer<T> extends Filter<T> {
 	
 	
 	/**
@@ -34,9 +34,10 @@ public class Producer<T> extends Filter<T> {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Message<T> produce() {
-		
-		
-		return null;
-	}
+	/**
+	 * 
+	 * @return message {@link Message}<T>
+	 *         the message produced by the producer
+	 */
+	public abstract Message<T> produce();
 }
